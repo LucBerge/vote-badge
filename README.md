@@ -17,6 +17,10 @@ Create your badge with our tool (_soon_) or follow the instructions bellow:
 3. Paste it in your README
 [![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fvote-badge.cyclic.app%2Fcount%2Fmy-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 
+4. Click an the badge to vote
+
+5. Force refresh the page to view the changes (Your browser cache can be a bit tricky)
+
 ## Custom your badge
 
 The badges are fully compatible with the [shields.io endpoint API](https://shields.io/endpoint).
