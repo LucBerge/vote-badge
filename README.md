@@ -15,18 +15,18 @@ Create your badge with our tool (_soon_) or follow the instructions bellow:
 
 2. Copy the following code in your README
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key?)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
 or use the [shields.io endpoint API](https://shields.io/endpoint)
 ```
 [![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fvote-badge.cyclic.app%2Fcount%2Fmy-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
 3. Paste it in your README to get the following badge
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key?)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 4. Click on the badge to vote
 
-5. Force refresh the page to view the changes (Your browser cache can be a bit tricky...)
+<!-- _Your browser of GitHub can be a bit tricky... The `?` at the end of the url force GitHub to call the API on refresh_ -->
 
 # View counter
 
@@ -42,12 +42,12 @@ You can also use the badge to count the number of views on your project, your pr
 2. Copy the following code in your README
 ```
 ![](https://vote-badge.cyclic.app/vote/my-other-unique-key)
-![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key)
+![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key?)
 ```
 
 3. Paste it in your README to get the following badge
 ![](https://vote-badge.cyclic.app/vote/my-other-unique-key)
-![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key)
+![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key?)
 
 4. A vote will be performed everytime the page is loaded.
 
