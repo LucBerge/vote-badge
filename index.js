@@ -44,6 +44,8 @@ app.get('/count/:key', async (req,res) => {
   const key = req.params.key
   const value = await db.get_vote(key)
   if(value != null) {
+	console.log(req.headers)
+	console.log(req.socket.remoteAddress)
 	console.log(`Count vote: ${key} = ${value} (from ${req.headers.host})`)
 	res.json(badge.create_badge(key, value));
   }
