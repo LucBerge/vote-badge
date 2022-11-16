@@ -60,7 +60,7 @@ app.get('/count/:key', async (req,res) => {
 			console.log(`GET request to ${shields_url}`)
 
 			https.get(shields_url, (resp) => {
-				let data = '';
+				let data = ''
 
 				// A chunk of data has been received.
 				resp.on('data', (chunk) => {
@@ -69,7 +69,8 @@ app.get('/count/:key', async (req,res) => {
 
 				// The whole response has been received. Print out the result.
 				resp.on('end', () => {
-					res.set('Content-Type', "image/svg+xml");
+					res.set('Content-Type', "image/svg+xml")
+					res.set('Cache-Control', "no-cache")
 					res.send(data).end()
 				});
 
