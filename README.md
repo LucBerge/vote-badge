@@ -55,20 +55,20 @@ You can also use the badge to count the number of views on your project, your pr
 
 - Add the parameter `label` to change the text
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Add the parameter `color` to change the color
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Add the parameter `logo` to add a logo
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awesome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Check the [full shield.io documentation](https://shields.io) for more customizations
