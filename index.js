@@ -4,6 +4,7 @@ const database = require('./database.js')
 const db = new database.Database(process.env.BUCKET)
 const badge = require('./badge.js')
 const bodyParser = require('body-parser');
+const https = require('https');
 
 app.use(bodyParser.json())
 
@@ -56,8 +57,24 @@ app.get('/count/:key', async (req,res) => {
 		else{
 			console.log(`Count vote: ${key} = ${value}`)
 			const shields_url = badge.create_url_badge(key, value, req.query)
-			console.log(`Redirecting to ${shields_url}`)
-			res.redirect(shields_url)
+			console.log(`GET request to ${shields_url}`)
+
+			https.get(shields_url, (resp) => {
+				let data = '';
+
+				// A chunk of data has been received.
+				resp.on('data', (chunk) => {
+					data += chunk;
+				});
+
+				// The whole response has been received. Print out the result.
+				resp.on('end', () => {
+					res.send(data).end()
+				});
+
+			}).on("error", (err) => {
+				res.sendStatus(500).end()
+			});
 		}
 	}
 	else {
