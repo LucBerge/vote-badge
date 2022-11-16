@@ -11,18 +11,18 @@ What do you think about this project ?
 
 Create your badge with our tool (_soon_) or follow the instructions bellow:
 
-1. Find a unique key which will be used to identify your vote. eg: `my-usernamer_my-key`
+1. Find a unique key which will be used to identify your vote. eg: `my-unique-key`
 
 2. Copy the following code in your README
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
 or use the [shields.io endpoint API](https://shields.io/endpoint)
 ```
-[![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fvote-badge.cyclic.app%2Fcount%2Fmy-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fvote-badge.cyclic.app%2Fcount%2Fmy-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
 3. Paste it in your README to get the following badge
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 4. Click on the badge to vote
 
@@ -37,17 +37,17 @@ You can also use the badge to count the number of views on your project, your pr
 
 ## Embed your own view counter
 
-1. Find a unique key which will be used to identify your vote. eg: `my-project_my-key`
+1. Find a unique key which will be used to identify your vote. eg: `my-other-unique-key`
 
 2. Copy the following code in your README
 ```
-![](https://vote-badge.cyclic.app/vote/my-project_my-key)
-![Custom badge](https://vote-badge.cyclic.app/count/my-project_my-key)
+![](https://vote-badge.cyclic.app/vote/my-other-unique-key)
+![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key)
 ```
 
 3. Paste it in your README to get the following badge
-![](https://vote-badge.cyclic.app/vote/my-project_my-key)
-![Custom badge](https://vote-badge.cyclic.app/count/my-project_my-key)
+![](https://vote-badge.cyclic.app/vote/my-other-unique-key)
+![Custom badge](https://vote-badge.cyclic.app/count/my-other-unique-key)
 
 4. A vote will be performed everytime the page is loaded.
 
@@ -55,20 +55,20 @@ You can also use the badge to count the number of views on your project, your pr
 
 - Add the parameter `label` to change the text
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Add the parameter `color` to change the color
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Add the parameter `logo` to add a logo
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-unique-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-unique-key)
 
 - Check the [full shield.io documentation](https://shields.io) for more customizations
