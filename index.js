@@ -69,6 +69,7 @@ app.get('/count/:key', async (req,res) => {
 
 				// The whole response has been received. Print out the result.
 				resp.on('end', () => {
+					res.set('Content-Type', "image/svg+xml");
 					res.send(data).end()
 				});
 
