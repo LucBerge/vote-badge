@@ -3,9 +3,9 @@
 Embed voting badges in your markdown files.
 What do you think about this project ?
 
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-usefull?label=Usefull)](https://vote-badge.cyclic.app/vote/vote-badge-readme-usefull)
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-blank?label=I%20don%27t%20care&color=yellow)](https://vote-badge.cyclic.app/vote/vote-badge-readme-blank)
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-useless?label=Useless&color=red)](https://vote-badge.cyclic.app/vote/vote-badge-readme-useless)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-usefull/?label=Usefull)](https://vote-badge.cyclic.app/vote/vote-badge-readme-usefull)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-blank/?label=I%20don%27t%20care&color=yellow)](https://vote-badge.cyclic.app/vote/vote-badge-readme-blank)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-useless/?label=Useless&color=red)](https://vote-badge.cyclic.app/vote/vote-badge-readme-useless)
 
 ## Embed your own voting badges
 
@@ -15,14 +15,14 @@ Create your badge with our tool (_soon_) or follow the instructions bellow:
 
 2. Copy the following code in your README
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 ```
 or use the [shields.io endpoint API](https://shields.io/endpoint)
 ```
 [![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fvote-badge.cyclic.app%2Fcount%2Fmy-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 ```
 3. Paste it in your README to get the following badge
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 
 4. Click on the badge to vote
 
@@ -33,7 +33,7 @@ or use the [shields.io endpoint API](https://shields.io/endpoint)
 You can also use the badge to count the number of views on your project, your profile or an issue.
 
 ![](https://vote-badge.cyclic.app/vote/vote-badge-readme-view)
-![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-view?label=Views&color=blue)
+![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-view/?label=Views&color=blue)
 
 ## Embed your own view counter
 
@@ -54,20 +54,20 @@ You can also use the badge to count the number of views on your project, your pr
 
 - Add the parameter `label` to change the text
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 
 - Add the parameter `color` to change the color
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 
 - Add the parameter `logo` to add a logo
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 ```
-[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
+[![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key/?label=Awsome&color=blue&logo=github)](https://vote-badge.cyclic.app/vote/my-username_my-key)
 
 - Check the [full shield.io documentation](https://shields.io) for more customizations
