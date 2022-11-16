@@ -20,54 +20,60 @@ SHIELDS_IO_USER_AGENT = 'Shields.io'
 function has_env_variables(){
 	for(let env_var of ENV_VARIABLES) {
 		if(! (env_var in process.env)) {
-			return false;
+			return false
 		}
 	}
-	return true;
+	return true
 }
 
 function is_shield_io(req) {
-	return req.headers['user-agent'].includes(SHIELDS_IO_USER_AGENT);
+	return req.headers['user-agent'].includes(SHIELDS_IO_USER_AGENT)
 }
 
 //Vote
 app.get('/vote/:key', async (req,res) => {
-  const key = req.params.key
-  const new_value = await db.increment_vote(key)
+	const key = req.params.key
+	const new_value = await db.increment_vote(key)
 
-  if(new_value != null) {
-    console.log(`Increment vote: ${key} = ${new_value} (from ${req.headers.host})`)
-	res.sendStatus(200).end()
-  }
-  else {
-	res.sendStatus(500).end()
-  }
+	if(new_value != null) {
+		console.log(`Increment vote: ${key} = ${new_value} (from ${req.headers.host})`)
+		res.sendStatus(200).end()
+	}
+	else {
+		res.sendStatus(500).end()
+	}
 })
 
 //Count
 app.get('/count/:key', async (req,res) => {
-  const key = req.params.key
-  const value = await db.get_vote(key)
-  if(value != null) {
-	console.log(req.headers['user-agent'])
-	console.log(is_shield_io(req))
-	console.log(`Count vote: ${key} = ${value} (from ${req.headers.host})`)
-	res.json(badge.create_badge(key, value));
-  }
-  else {
-	res.sendStatus(500).end()
-  }
+	const key = req.params.key
+	const value = await db.get_vote(key)
+	if(value != null) {
+		if(is_shield_io(req)){
+			console.log(`Count vote: ${key} = ${value} (from shields.io)`)
+			res.json(badge.create_json_badge(key, value))
+		}
+		else{
+			console.log(`Count vote: ${key} = ${value}`)
+			const shields_url = badge.create_url_badge(key, value, req.query)
+			console.log(`Redirecting to ${shields_url}`)
+			res.redirect(shields_url)
+		}
+	}
+	else {
+		res.sendStatus(500).end()
+	}
 })
 
 //Errors
 app.use('*', (req,res) => {
-  res.sendStatus(404).end()
+	res.sendStatus(404).end()
 })
 
 //Start
 if(has_env_variables()){
 	app.listen(process.env.PORT, () => {
-	  console.log(`index.js listening at http://localhost:${process.env.PORT}`)
+		console.log(`index.js listening at http://localhost:${process.env.PORT}`)
 	})
 }
 else {
