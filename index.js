@@ -15,6 +15,7 @@ ENV_VARIABLES = [
 	"AWS_SECRET_ACCESS_KEY",
 	"AWS_SESSION_TOKEN"
 ]
+SHIELDS_IO_USER_AGENT = 'Shields.io'
 
 function has_env_variables(){
 	for(let env_var of ENV_VARIABLES) {
@@ -23,6 +24,10 @@ function has_env_variables(){
 		}
 	}
 	return true;
+}
+
+function is_shield_io(req) {
+	return req.headers['user-agent'].includes(SHIELDS_IO_USER_AGENT);
 }
 
 //Vote
@@ -44,8 +49,8 @@ app.get('/count/:key', async (req,res) => {
   const key = req.params.key
   const value = await db.get_vote(key)
   if(value != null) {
-	console.log(req.headers)
-	console.log(req.socket.remoteAddress)
+	console.log(req.headers['user-agent'])
+	console.log(is_shield_io(req))
 	console.log(`Count vote: ${key} = ${value} (from ${req.headers.host})`)
 	res.json(badge.create_badge(key, value));
   }
