@@ -7,11 +7,12 @@ What do you think about this project ?
 [![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-blank?label=I%20don%27t%20care&color=yellow)](https://vote-badge.cyclic.app/vote/vote-badge-readme-blank)
 [![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-useless?label=Useless&color=red)](https://vote-badge.cyclic.app/vote/vote-badge-readme-useless)
 
-## Embed your own badges
+## Embed your own voting badges
 
 Create your badge with our tool (_soon_) or follow the instructions bellow:
 
 1. Find a unique key which will be used to identify your vote. eg: `my-usernamer_my-key`
+
 2. Copy the following code in your README
 ```
 [![Custom badge](https://vote-badge.cyclic.app/count/my-username_my-key)](https://vote-badge.cyclic.app/vote/my-username_my-key)
@@ -27,7 +28,29 @@ or use the [shields.io endpoint API](https://shields.io/endpoint)
 
 5. Force refresh the page to view the changes (Your browser cache can be a bit tricky...)
 
-## Custom badge
+# View counter
+
+You can also use the badge to count the number of views on your project, your profile or an issue.
+
+![](https://vote-badge.cyclic.app/vote/vote-badge-readme-view)
+![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-view?label=Views&color=blue)
+
+## Embed your own view counter
+
+1. Find a unique key which will be used to identify your vote. eg: `my-project_my-key`
+
+2. Copy the following code in your README
+```
+![](https://vote-badge.cyclic.app/vote/my-project_my-key)
+![Custom badge](https://vote-badge.cyclic.app/count/my-project_my-key)
+```
+
+3. Paste it in your README to get the following badge
+![Custom badge](https://vote-badge.cyclic.app/count/my-project_my-key)
+
+4. A vote will be performed everytime the page is loaded.
+
+# Customize the badges
 
 - Add the parameter `label` to change the text
 ```
