@@ -3,9 +3,9 @@
 Embed voting badges in your markdown files.
 What do you think about this project ?
 
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-usefull?label=Usefull)](https://vote-badge.cyclic.app/vote/vote-badge-readme-yes)
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-blank?label=I%20don%27t%20care&color=yellow)](https://vote-badge.cyclic.app/vote/vote-badge-readme-no)
-[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-useless?label=Useless&color=red)](https://vote-badge.cyclic.app/vote/vote-badge-readme-no)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-usefull?label=Usefull)](https://vote-badge.cyclic.app/vote/vote-badge-readme-usefull)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-blank?label=I%20don%27t%20care&color=yellow)](https://vote-badge.cyclic.app/vote/vote-badge-readme-blank)
+[![Custom badge](https://vote-badge.cyclic.app/count/vote-badge-readme-useless?label=Useless&color=red)](https://vote-badge.cyclic.app/vote/vote-badge-readme-useless)
 
 ## Embed your own badges
 
