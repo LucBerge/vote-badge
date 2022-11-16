@@ -46,6 +46,7 @@ You can also use the badge to count the number of views on your project, your pr
 ```
 
 3. Paste it in your README to get the following badge
+![](https://vote-badge.cyclic.app/vote/my-project_my-key)
 ![Custom badge](https://vote-badge.cyclic.app/count/my-project_my-key)
 
 4. A vote will be performed everytime the page is loaded.
