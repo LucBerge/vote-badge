@@ -4,6 +4,7 @@ const database = require('./database.js')
 const db = new database.Database(process.env.BUCKET)
 const badge = require('./badge.js')
 const bodyParser = require('body-parser');
+const path = require('path');
 
 app.use(bodyParser.json())
 
@@ -37,7 +38,7 @@ app.get('/vote/:key', async (req,res) => {
 
 	if(value != null) {
 		console.log(`Increment: ${key} = ${value} (from ${req.headers.host})`)
-		res.sendStatus(200).end()
+		res.sendFile(path.resolve('./static/vote.html'))
 	}
 	else {
 		res.sendStatus(500).end()
