@@ -1,3 +1,5 @@
+const https = require('https');
+
 DEFAULT_COLOR = "green"
 
 function create_url_badge(key, value, query){
@@ -11,6 +13,30 @@ function create_url_badge(key, value, query){
 	return url
 }
 
+async function get_badge(key, value, query) {
+	const shields_url = create_url_badge(key, value, query)
+	console.log(`GET request to ${shields_url}`)
+	let data = ''
+	await new Promise((resolve) => {
+		https.get(shields_url, (resp) => {
+
+			// A chunk of data has been received.
+			resp.on('data', (chunk) => {
+				data += chunk
+			});
+
+			// The whole response has been received. Print out the result.
+			resp.on('end', () => {
+				resolve(data)
+			});
+		}).on("error", (err) => {
+			console.log("Shield.io request failed:")
+			console.error(err)
+		})
+	})
+	return data
+}
+
 function create_json_badge(key, value){
 	return {
 		"schemaVersion": 1,
@@ -21,5 +47,5 @@ function create_json_badge(key, value){
 }
 
 module.exports = {
-	create_url_badge, create_json_badge
+	get_badge, create_json_badge
 }

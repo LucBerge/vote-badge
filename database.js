@@ -33,14 +33,14 @@ class Database {
 		}
 	}
 	
-	async set_vote(key, new_value) {
+	async set_vote(key, value) {
 		try {
 			await s3.putObject({
-				Body: new_value.toString(),
+				Body: value.toString(),
 				Bucket: this.bucket,
 				Key: key,
 			}).promise()
-			return new_value
+			return value
 		}
 		catch (error) {
 			console.log("Cannot access the database:")
@@ -50,9 +50,12 @@ class Database {
 	}
 	
 	async increment_vote(key) {
-		let vote = await this.get_vote(key)
-		vote++
-		return await this.set_vote(key, vote)
+		let value = await this.get_vote(key)
+		if(value != null) {
+			value++
+			value = await this.set_vote(key, value)
+		}
+		return value
 	}
 }
 

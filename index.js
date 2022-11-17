@@ -4,7 +4,6 @@ const database = require('./database.js')
 const db = new database.Database(process.env.BUCKET)
 const badge = require('./badge.js')
 const bodyParser = require('body-parser');
-const https = require('https');
 
 app.use(bodyParser.json())
 
@@ -34,10 +33,10 @@ function is_shield_io(req) {
 //Vote
 app.get('/vote/:key', async (req,res) => {
 	const key = req.params.key
-	const new_value = await db.increment_vote(key)
+	const value = await db.increment_vote(key)
 
-	if(new_value != null) {
-		console.log(`Increment vote: ${key} = ${new_value} (from ${req.headers.host})`)
+	if(value != null) {
+		console.log(`Increment: ${key} = ${value} (from ${req.headers.host})`)
 		res.sendStatus(200).end()
 	}
 	else {
@@ -51,32 +50,38 @@ app.get('/count/:key', async (req,res) => {
 	const value = await db.get_vote(key)
 	if(value != null) {
 		if(is_shield_io(req)){
-			console.log(`Count vote: ${key} = ${value} (from shields.io)`)
+			console.log(`Count: ${key} = ${value} (from shields.io)`)
 			res.json(badge.create_json_badge(key, value))
 		}
 		else{
-			console.log(`Count vote: ${key} = ${value}`)
-			const shields_url = badge.create_url_badge(key, value, req.query)
-			console.log(`GET request to ${shields_url}`)
-
-			https.get(shields_url, (resp) => {
-				let data = ''
-
-				// A chunk of data has been received.
-				resp.on('data', (chunk) => {
-					data += chunk;
-				});
-
-				// The whole response has been received. Print out the result.
-				resp.on('end', () => {
-					res.set('Content-Type', "image/svg+xml")
-					res.set('Cache-Control', "no-cache")
-					res.send(data).end()
-				});
-
-			}).on("error", (err) => {
+			const data = await badge.get_badge(key, value, req.query)
+			if(data) {
+				console.log(`Count: ${key} = ${value}`)
+				res.set('Content-Type', "image/svg+xml")
+				res.set('Cache-Control', "no-cache")
+				res.send(data).end()
+			}
+			else {
 				res.sendStatus(500).end()
-			});
+			}
+		}
+	}
+	else {
+		res.sendStatus(500).end()
+	}
+})
+
+//View
+app.get('/view/:key', async (req,res) => {
+	const key = req.params.key
+	const value = await db.increment_vote(key)
+	if(value != null) {
+		const data = await badge.get_badge(key, value, req.query)
+		if(data) {
+			console.log(`View: ${key} = ${value}`)
+			res.set('Content-Type', "image/svg+xml")
+			res.set('Cache-Control', "no-cache")
+			res.send(data).end()
 		}
 	}
 	else {
