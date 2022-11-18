@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://vote-badge.cyclic.app/index" target="_blank">
+    <img width="500" src="https://github.com/LucBerge/vote-badge/raw/master/static/images/example.png">
+  </a>
+</p>
+
 # Vote badge
 
 Embed voting badges in your markdown files.
