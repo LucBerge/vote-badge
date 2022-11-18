@@ -1,12 +1,14 @@
 const express = require('express')
-const app = express()
 const database = require('./database.js')
-const db = new database.Database(process.env.BUCKET)
 const badge = require('./badge.js')
 const bodyParser = require('body-parser');
 const path = require('path');
 
-app.use(bodyParser.json())
+const app = express()
+app.use(bodyParser.json());
+app.use('/static', express.static(__dirname + '/static'));
+
+const db = new database.Database(process.env.BUCKET)
 
 ENV_VARIABLES = [
 	"PORT",
@@ -30,6 +32,11 @@ function has_env_variables(){
 function is_shield_io(req) {
 	return req.headers['user-agent'].includes(SHIELDS_IO_USER_AGENT)
 }
+
+//Index
+app.get('/index', async (req,res) => {
+	res.sendFile(path.resolve('./static/index.html'))
+})
 
 //Vote
 app.get('/vote/:key', async (req,res) => {
@@ -92,7 +99,7 @@ app.get('/view/:key', async (req,res) => {
 
 //Errors
 app.use('*', (req,res) => {
-	res.sendStatus(404).end()
+	res.redirect('/index');
 })
 
 //Start

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Badge</title>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <script src="./static/script.js"></script>
+</head>
+<body>
+	<div class="background" align="center">
+		<div class="playground">
+			<span class="title title-main">Customize your badge</span>
+			<div class="wrapper wrapper-wide wrapper-input">
+				<span class="label">Key*</span>
+				<input class="input" type="text" id="key-input" placeholder="Enter your unique key (eg: username-subkey)" onkeyup="create_badge()">
+			</div>
+			<div class="wrapper wrapper-narrow wrapper-input">
+				<span class="label">Label</span>
+				<input class="input" type="text" id="label-input" onkeyup="create_badge()">
+			</div>
+			<div class="wrapper wrapper-narrow wrapper-input">
+				<span class="label">Color</span>
+				<input class="input" type="text" id="color-input" onkeyup="create_badge()">
+			</div>
+			<div class="wrapper wrapper-narrow wrapper-input">
+				<span class="label">Logo</span>
+				<input class="input" type="text" id="logo-input" onkeyup="create_badge()">
+			</div>
+			<div class="wrapper wrapper-narrow wrapper-input">
+				<span class="label">Logo color</span>
+				<input class="input" type="text" id="logo-color-input" onkeyup="create_badge()">
+			</div>
+			<span class="title title-second">Badge rendering</span>
+			<img class="badge" src="" id="badge-output" >
+			<div class="wrapper wrapper-wide">
+				<span class="label">Vote badge</span>
+				<textarea readonly class="textarea" id="vote-output" contenteditable="false" spellcheck="false"></textarea>
+			</div>
+			<div class="wrapper wrapper-wide">
+				<span class="label">View counter badge</span>
+				<textarea readonly class="textarea" id="view-counter-output" contenteditable="false" spellcheck="false"></textarea>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

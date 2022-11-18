@@ -9,7 +9,7 @@ What do you think about this project ?
 
 ## Embed your own voting badges
 
-Create your badge with our tool (_soon_) or follow the instructions bellow:
+Create your badge with [our tool](https://vote-badge.cyclic.app/index) or follow the instructions bellow:
 
 1. Find a unique key which will be used to identify your vote. eg: `my-unique-key`
 
@@ -40,11 +40,11 @@ You can also use the badge to count the number of views on your project, your pr
 
 2. Copy the following code
 ```
-![Custom badge](https://vote-badge.cyclic.app/view/my-other-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/view/my-other-unique-key)](https://github.com/LucBerge/vote-badge)
 ```
 
 3. Paste it in your README to get the following badge
-![Custom badge](https://vote-badge.cyclic.app/view/my-other-unique-key)
+[![Custom badge](https://vote-badge.cyclic.app/view/my-other-unique-key)](https://github.com/LucBerge/vote-badge)
 
 4. It will be incremented everytime the page is loaded
 
