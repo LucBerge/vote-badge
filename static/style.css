@@ -13,7 +13,6 @@ html, body {
 	top: 0px;
 	left: 0px;
 }
-/* https://cssgradient.io/ */
 .background {
 	height: 100%;
 	width: 100%;
@@ -27,7 +26,7 @@ html, body {
 }
 .playground {
 	width: 600px;
-	background: #fff;
+	background: #ffffff;
 	border-radius: 10px;
 	overflow: hidden;
 	padding: 42px 55px 45px;
@@ -36,7 +35,7 @@ html, body {
 	display: block;
 	font-family: Poppins;
 	font-weight: bold;
-	color: #333;
+	color: #555555;
 	line-height: 1.2;
 	text-align: center;
 }
@@ -48,8 +47,6 @@ html, body {
 	padding-top: 44px;
 	padding-bottom: 20px;
 	font-size: 30px;
-}
-.validate-input {
 }
 .wrapper {
 	padding-bottom: 13px;
@@ -73,7 +70,7 @@ html, body {
 	text-align: left;
 	font-family: Poppins;
 	font-size: 13px;
-	color: #666;
+	color: #555555;
 	line-height: 1.5;
 	padding-left: 5px;
 }
@@ -85,7 +82,7 @@ html, body {
 	font-family: Poppins;
 	font-weight: bold;
 	font-size: 18px;
-	color: #333;
+	color: #555555;
 	line-height: 1.2;
 	padding: 0 5px;
 	outline: none;
